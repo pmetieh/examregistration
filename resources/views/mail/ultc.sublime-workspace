@@ -1,0 +1,643 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"has",
+				"hasOne"
+			],
+			[
+				"_",
+				"_user"
+			],
+			[
+				"in",
+				"invoiceNum"
+			],
+			[
+				"fon",
+				"font-size\tproperty"
+			],
+			[
+				"font-",
+				"font-weight\tproperty"
+			],
+			[
+				"con",
+				"contacts"
+			],
+			[
+				"padding",
+				"padding-left\tproperty"
+			],
+			[
+				"nu",
+				"NULL"
+			],
+			[
+				"image",
+				"images"
+			],
+			[
+				"min-",
+				"min-width\tproperty"
+			],
+			[
+				"obj",
+				"object-fit\tproperty"
+			],
+			[
+				"padd",
+				"padding\tproperty"
+			],
+			[
+				"text-a",
+				"text-align\tproperty"
+			],
+			[
+				"flex",
+				"flex-basis\tproperty"
+			],
+			[
+				"spa",
+				"space-between\tjustify-content"
+			],
+			[
+				"di",
+				"display\tproperty"
+			],
+			[
+				"mad",
+				"max-width\tproperty"
+			],
+			[
+				"j",
+				"jQuery"
+			],
+			[
+				"bac",
+				"background-color\tproperty"
+			],
+			[
+				"ba",
+				"background-color\tproperty"
+			],
+			[
+				"fl",
+				"flex-start\tjustify-content"
+			],
+			[
+				"sp",
+				"space-between\tjustify-content"
+			],
+			[
+				"box",
+				"box-sizing\tproperty"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/C/xampp/htdocs/ultc/app/Http/Controllers/UGradController.php",
+			"settings":
+			{
+				"buffer_size": 12287,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "examnotification.blade.php",
+			"settings":
+			{
+				"buffer_size": 536,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/xampp/htdocs/ultc/app/Mail/ExamNotification.php",
+			"settings":
+			{
+				"buffer_size": 1194,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/xampp/htdocs/ultc/app/User.php",
+			"settings":
+			{
+				"buffer_size": 1977,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/xampp/htdocs/ultc/routes/web.php",
+			"settings":
+			{
+				"buffer_size": 4974,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/xampp/htdocs/ultc/app/Http/Controllers/TestingCenterController.php",
+			"settings":
+			{
+				"buffer_size": 5328,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/xampp/htdocs/ultc/resources/views/admin/setDateView.blade.php",
+			"settings":
+			{
+				"buffer_size": 1309,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/xampp/htdocs/ultc/resources/views/pages/inputdata.blade.php",
+			"settings":
+			{
+				"buffer_size": 20770,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/xampp/htdocs/ultc/resources/views/includes/adminheader.blade.php",
+			"settings":
+			{
+				"buffer_size": 5941,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/xampp/htdocs/ultc",
+		"/C/xampp/htdocs/ultc/app",
+		"/C/xampp/htdocs/ultc/resources",
+		"/C/xampp/htdocs/ultc/resources/views",
+		"/C/xampp/htdocs/ultc/resources/views/pages"
+	],
+	"file_history":
+	[
+		"/C/xampp/htdocs/ultc/app/TestingCenter.php",
+		"/C/xampp/htdocs/ultc/resources/views/admin/edittestcenter.blade.php",
+		"/C/xampp/htdocs/ultc/resources/views/admin/createtestcenter.blade.php",
+		"/C/xampp/htdocs/ultc/app/Http/Controllers/TestingCenterController.php",
+		"/C/xampp/htdocs/ultc/.env",
+		"/C/xampp/htdocs/ultc/config/mail.php",
+		"/C/xampp/htdocs/ghrm/config/app.php",
+		"/C/xampp/htdocs/ghrm/.env",
+		"/C/xampp/htdocs/ghrm/ghrmdb(1).sql",
+		"/C/xampp/htdocs/centralsrore/public/css/app.css",
+		"/C/xampp/htdocs/centralsrore/.env",
+		"/C/xampp/htdocs/centralsrore/config/app.php",
+		"/C/xampp/htdocs/centralsrore/database/migrations/2014_10_12_100000_create_password_resets_table.php",
+		"/C/xampp/htdocs/centralsrore/database/migrations/2014_10_12_000000_create_users_table.php",
+		"/C/xampp/htdocs/ghrm/vendor/laravel/framework/src/Illuminate/Contracts/Mail/Mailable.php",
+		"/C/xampp/htdocs/nfal/wp-content/themes/nafaatheme/style.css",
+		"/C/xampp/htdocs/nfal/wp-content/themes/nafaatheme/functions.php",
+		"/C/xampp/htdocs/nfal/wp-content/themes/nafaatheme/js/switchImage.js",
+		"/C/xampp/htdocs/nfal/wp-content/themes/nafaatheme/footer.php",
+		"/C/xampp/htdocs/nfal/wp-content/themes/nafaatheme/July_23_2018_home.php",
+		"/C/xampp/htdocs/nfal/wp-content/themes/nafaatheme/style2.css",
+		"/C/xampp/htdocs/nfal/wp-content/themes/nafaatheme/js/adjust_image.js",
+		"/C/xampp/htdocs/nfal/style_responsive",
+		"/D/nafaatheme/home.php",
+		"/C/xampp/htdocs/flexboxtutorial/responsivestyle.css",
+		"/C/xampp/htdocs/flexboxtutorial/css/w3.css",
+		"/C/xampp/htdocs/flexboxtutorial/index.php",
+		"/C/xampp/phpMyAdmin/config.inc.php"
+	],
+	"find":
+	{
+		"height": 57.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"');\n",
+			"addcenter",
+			";\n"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 7,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/C/xampp/htdocs/ultc/app/Http/Controllers/UGradController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 12287,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2038.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "examnotification.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 536,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/C/xampp/htdocs/ultc/app/Mail/ExamNotification.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1194,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 270.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/C/xampp/htdocs/ultc/app/User.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1977,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1176,
+								1176
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 378.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/C/xampp/htdocs/ultc/routes/web.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4974,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1404.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/C/xampp/htdocs/ultc/app/Http/Controllers/TestingCenterController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5328,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1773.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/C/xampp/htdocs/ultc/resources/views/admin/setDateView.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1309,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "/C/xampp/htdocs/ultc/resources/views/pages/inputdata.blade.php",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 20770,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "/C/xampp/htdocs/ultc/resources/views/includes/adminheader.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5941,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4021,
+								4021
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1287.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 29.0
+	},
+	"input":
+	{
+		"height": 39.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "/C/xampp/htdocs/nfal/wp-content/themes/nafaatheme/ultcproject.sublime-project",
+	"replace":
+	{
+		"height": 54.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 387.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

@@ -1,0 +1,12 @@
+[Fri May 20 06:25:02.195602 2022] [mpm_prefork:notice] [pid 26604] AH00163: Apache/2.4.29 (Ubuntu) configured -- resuming normal operations
+[Fri May 20 06:25:02.195650 2022] [core:notice] [pid 26604] AH00094: Command line: '/usr/sbin/apache2'
+[Fri May 20 09:44:56.205120 2022] [php7:error] [pid 32310] [client 20.230.164.138:49347] script '/var/www/examtesting/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php' not found or unable to stat
+[Fri May 20 13:48:39.894400 2022] [mpm_prefork:notice] [pid 26604] AH00169: caught SIGTERM, shutting down
+[Fri May 20 13:48:40.013440 2022] [mpm_prefork:notice] [pid 3296] AH00163: Apache/2.4.29 (Ubuntu) configured -- resuming normal operations
+[Fri May 20 13:48:40.013514 2022] [core:notice] [pid 3296] AH00094: Command line: '/usr/sbin/apache2'
+[Fri May 20 13:49:16.987525 2022] [mpm_prefork:notice] [pid 3296] AH00169: caught SIGTERM, shutting down
+[Fri May 20 13:49:17.099568 2022] [mpm_prefork:notice] [pid 3358] AH00163: Apache/2.4.29 (Ubuntu) configured -- resuming normal operations
+[Fri May 20 13:49:17.099651 2022] [core:notice] [pid 3358] AH00094: Command line: '/usr/sbin/apache2'
+[Fri May 20 13:56:29.651764 2022] [mpm_prefork:notice] [pid 3358] AH00169: caught SIGTERM, shutting down
+[Fri May 20 13:56:29.778478 2022] [mpm_prefork:notice] [pid 3407] AH00163: Apache/2.4.29 (Ubuntu) configured -- resuming normal operations
+[Fri May 20 13:56:29.778555 2022] [core:notice] [pid 3407] AH00094: Command line: '/usr/sbin/apache2'
