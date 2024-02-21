@@ -3,9 +3,9 @@
 {{-- <div id="outer_content" class="container"> --}}
 
    <h1 style="font-size: 1.5em; text-align: center; color: blue;">University Of Liberia Entrance</h1>
-   <h2>Graduate Entrance Exam BioData Input Form</h1>
+   <h2>Graduate Entrance Exam BioData Form</h1>
 
-   
+
 
     <form  name="gradstudent_biodata_form" id="gradbiodata" role="form" action="{{ url('savegraddata') }}" method="post" enctype="multipart/form-data">
         {{ csrf_field() }}
@@ -15,22 +15,22 @@
            <img class="pull-right" id="img_pic"style="margin-bottom: 10px;" src="images/no_image.jpg" alt="photo" width="100px" height="100px"/>
 
         </p>
-        
+
       </div>
        <div class="row jumbotron">
-           
+
            <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
                             <label for="name" class="col-md-6 control-label">Login Name</label>
 
                             <div class="col-md-6">
                                 <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required autofocus>
-
-                                @if ($errors->has('name'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('name') }}</strong>
-                                    </span>
-                                @endif
+                                @error('name')
+                                <span class="alert-danger">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
                             </div>
+
                         </div>
 
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
@@ -38,12 +38,11 @@
 
                             <div class="col-md-6">
                                 <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
-
-                                @if ($errors->has('email'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
+                                @error('email'))
+                                <span class="alert-danger">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
                             </div>
                         </div>
 
@@ -52,13 +51,13 @@
 
                             <div class="col-md-6">
                                 <input id="password" type="password" class="form-control" name="password" required>
-
-                                @if ($errors->has('password'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
                             </div>
+
+                            @error('password'))
+                            <span class="alert-danger">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
                         </div>
                             <div class="form-group">
                                 <label for="password-confirm" class="col-md-6 control-label">Confirm Password</label>
@@ -66,39 +65,66 @@
                                 <div class="col-md-3">
                                     <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
                                 </div>
+                                @error('password-confirm')
+                                <span class="alert-danger">
+                                    {{ $message }}
+                                </span>
+                                @enderror
+
                             </div>
 
                      </div>
 
 
        <div class="row jumbotron">
-
-                
                 <div class="form-group">
                     <label class="control-label col-md-6" for="firstName">First Name</label>
                     <div class="col-md-6">
                       <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name"/>
+                      @error('firstname')
+                      <span class="alert-danger">
+                          {{ $message }}
+                      </span>
+                      @enderror
                     </div>
-                   
+
                 </div>
 
                 <div class="form-group">
                     <label class="control-label col-lg-6" for="otherName">Middle Name</label>
                     <div class="col-lg-6">
                         <input type="text" class="form-control" id="otherName" name="otherName" placeholder="Middle Name"/>
+                        @error('otherName')
+                        <span class="alert-danger">
+                            {{ $message }}
+                        </span>
+                        @enderror
                     </div>
+
                 </div>
                 <div class="form-group">
                     <label for="lastName" class="control-label col-lg-6">Last Name</label>
                     <div class="col-lg-6">
                         <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name"/>
+                        @error('lastName')
+                        <span class="alert-danger">
+                            {{ $message }}
+                        </span>
+                        @enderror
                     </div>
+
                 </div>
                 <div class="form-group">
                     <label class="control-label col-lg-6" for="dob">Date Of Birth</label>
                     <div class="col-lg-6">
                         <input type="date" class="form-control" id="dob" name="dob"/>
+                        @error('date')
+                        <span class="alert-danger">
+                            {{ $message }}
+                        </span>
+                        @enderror
                     </div>
+
                 </div>
 
                  <div class="form-group">
@@ -108,8 +134,14 @@
                            <option value="Liberian">Liberian</option>
                            <option value="Nigerian">Nigerian</option>
                        </select>
+                       @error('nationality')
+                    <span class="alert-danger">
+                        {{ $message }}
+                    </span>
+                    @enderror
                     </div>
-                </div> 
+
+                </div>
 
                 <div class="form-group">
                     <label for="maritalStatus" class="control-label col-lg-6">Marital Status</label>
@@ -120,14 +152,20 @@
                            <option value="Divorced">Divorced</option>
                            <option value="widowed">Widowed</option>
                        </select>
+                       @error('maritalStatus')
+                    <span class="alert-danger">
+                        {{ $message }}
+                    </span>
+                    @enderror
                     </div>
+
                 </div>
 
                 <div class="form-group">
                     <label for="county" class="control-label col-lg-6">County Of Origin</label>
                     <div class="col-lg-6">
                        <select class="form-control col-md-6" name="countyOfO" id="countyOfO">
-                           
+
                             <?php
                                 use App\County;
 
@@ -139,12 +177,17 @@
 
 
                             ?>
-                        
+
                        </select>
+                   @error('countyOfO')
+                    <span class="alert-danger">
+                        {{ $message }}
+                    </span>
+                    @enderror
                     </div>
                 </div>
 
-               
+
                 <div class="form-group">
                     <label for="gender" class="control-label col-lg-6">Gender</label>
                     <div class="col-lg-6">
@@ -152,29 +195,53 @@
                             <option value="Male">Male</option>
                             <option value="Female">Female</option>
                         </select>
+
+                        @error('gender')
+                    <span class="alert-danger">
+                        {{ $message }}
+                    </span>
+                    @enderror
                     </div>
+
                 </div>
-             
+
 
                  <div class="form-group">
-                    <label for="examNo" class="control-label col-md-6" >Mobile Number</label>
+                    <label for="mobileno" class="control-label col-md-6" >Mobile Number</label>
                     <div class="col-md-6">
                          <input type="text" class="form-control col-md-6" id="mobileNo" name="mobileNo" placeholder="Mobile Number"/>
+                         @error('mobileno')
+                         <span class="alert-danger">
+                             {{ $message }}
+                         </span>
+                         @enderror
                     </div>
-                    
+
                 </div>
                 <div class="form-group">
                     <label for="cellNumber" class="control-label col-lg-6">Emergency Cell Number 1</label>
                     <div class="col-lg-6">
                         <input type="text" class="form-control" name="cellNumber1" id="cellNumber1" placeholder="Emrgency Cell Number"/>
+                        @error('cellNumber1')
+                        <span class="alert-danger">
+                            {{ $message }}
+                        </span>
+                        @enderror
                     </div>
+
                 </div>
-                
+
                 <div class="form-group">
                     <label for="cellNumber" class="control-label col-lg-6">Emergency Cell Number 2</label>
                     <div class="col-lg-6">
                         <input type="text" class="form-control" name="cellNumber2" id="cellNumber2" placeholder="Emrgency Cell Number"/>
+                        @error('cellNumber2')
+                        <span class="alert-danger">
+                            {{ $message }}
+                        </span>
+                        @enderror
                     </div>
+
                 </div>
 
 
@@ -182,8 +249,13 @@
                     <label for="examNo" class="control-label col-md-6" >Exam Number</label>
                     <div class="col-md-6">
                          <input type="text" class="form-control col-md-6" id="examNo" name="examNo" value="26374"/>
-                    </div>
-                    
+                         @error('examNo')
+                    <span class="alert-danger">
+                        {{ $message }}
+                    </span>
+                    @enderror
+                        </div>
+
                 </div>
 
 
@@ -198,41 +270,50 @@
                           <option value="FourOrMoreTimes">FourOrMoreTimes</option>
                        </select>
                    </div>
-
                </div>
 
 
             </div><!--row1 ends here-->
-                
+
  @if ($formtype == 'grad')
             <div class="row jumbotron" id="row2" style="background-color: light blue"><!--graduate school section-->
             <h3>Graduate Section</h3>
 
             <div class="form-group">
                 <label class="col-md-6 control-label" for="">Degree Earned</label>
-              <div class="col-md-6">   
+              <div class="col-md-6">
                 <select class="form-control" name="degreeEarned" id="degreeEarned">
                      <option value="BA">BA</option>
                      <option value="BSC">BSC</option>
                      <option value="BTech">BTech</option>
                 </select>
-             </div> 
-            </div>   
+                @error('degreeEarned')
+                    <span class="alert-danger">
+                        {{ $message }}
+                    </span>
+                    @enderror
+             </div>
+
+            </div>
 
              <div class="form-group">
               <label class="col-md-6 control-label" for="gpa">GPA</label>
               <div class="col-md-6">
                   <input type="text" class="form-control" name="gpa" id="gpa" />
+                  @error('gpa')
+                    <span class="alert-danger">
+                        {{ $message }}
+                    </span>
+                    @enderror
               </div>
-              
-             
-             </div>   
+
+             </div>
 
              <div class="form-group">
                     <label for="county" class="control-label col-lg-6" for="uniLoc">University Location</label>
                     <div class="col-lg-6">
                        <select class="form-control col-md-6" name="uniLoc" id="uniLoc">
-                           
+
                             <?php
                                 //use ;
 
@@ -244,12 +325,18 @@
 
 
                             ?>
-                        
+
                        </select>
                     </div>
-                </div>
+                    @error('uniLoc')
+                    <span class="alert-danger">
+                        {{ $message }}
+                    </span>
+                    @enderror
+             </div>
+             <!--</div>-->
                 <h2>Health Science</h2>
-               
+
                 <div class="form-group">
                     <label for="county" class="control-label col-lg-6" for="medicalSchool">Health Science Program</label>
                     <div class="col-lg-6">
@@ -259,7 +346,13 @@
                             <option value="Graduate School">Graduate School<option/>
                        </select>
                     </div>
-                </div>
+                    @error('medicalSchool')
+                    <span class="alert-danger">
+                        {{ $message }}
+                    </span>
+                    @enderror
+             </div>
+            </div>
 
             {{--  <div class="form-group">
               <label class="col-md-6 control-label" for="uniLoc">Country</label>
@@ -278,6 +371,11 @@
                 <div class="col-md-6">
                     <input class="form-control col-md-6" type="text" name="amntpaid" id="amntpaid" value="150"/>
                 </div>
+                @error('amntpaid')
+                    <span class="alert-danger">
+                        {{ $message }}
+                    </span>
+                    @enderror
               </div>
 
 
@@ -285,7 +383,13 @@
                 <label class="col-md-6 control-label" for="paydate">Payment Date</label>
                 <div class="col-md-6">
                     <input class="form-control col-md-6" type="date" name="paydate" id="paydate"/>
+                    @error('paydate')
+                    <span class="alert-danger">
+                        {{ $message }}
+                    </span>
+                    @enderror
                 </div>
+
               </div>
 
                <div class="form-group">
@@ -293,6 +397,11 @@
                 <div class="col-md-6">
                     <input class="form-control col-md-6" type="text" name="bankRecptNo" id="bankRecptNo" value="908876541"/>
                 </div>
+                @error('bankRecptNo')
+                    <span class="alert-danger">
+                        {{ $message }}
+                    </span>
+                    @enderror
               </div>
 
            </div>
@@ -355,9 +464,9 @@
                     }
 
 
-                        
+
                     }
-                       
+
                 }
             );
     }
@@ -379,7 +488,7 @@
                 img.src = window.URL.createObjectURL(oFiles[0]);
                // img.height = '60';
 
-               //load the image 
+               //load the image
                 img.onload = function() {
                     window.URL.revokeObjectURL(img.src);
                 };

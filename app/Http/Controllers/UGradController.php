@@ -22,6 +22,7 @@ use App\Classes\ExamRegistrationService;
 use App\Http\Controllers\SMSController;
 use Mailgun\Mailgun;
 use App\Events\ExamRegistration;
+use Validator;
 
 //use App\User;
 /*use App\Classes\PHPExcel\IOFactory;
@@ -60,6 +61,13 @@ class UGradController extends Controller
     {
         //         dd($request);
 
+        $validate = $request->validate([
+            'name' => 'required'
+        ]);
+        //return->json();
+       // dd($validate);
+
+
         $phoneNo = $request->input('mobileNo');
         $fName = $request->input('firstName');
         $lName = $request->input('lastName');
@@ -67,7 +75,6 @@ class UGradController extends Controller
 
             /**/
                 $user = User::create(  [
-
                     'name'=>$request->input('name'),
                     'email'=>$request->input('email'),
                     'password'=>bcrypt($request->input('password')),

@@ -16,7 +16,7 @@
                 <ul class="dropdown-menu">
                     <li>
                         <a href="{{url('/')}}">Home</a>
-                    </li>                    
+                    </li>
                     <li>
                         <a href="{{url('adminDashboard')}}">Dashboard</a>
                     </li>
@@ -27,15 +27,15 @@
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">Undergraduate Entrance Form</a>
                 <ul class="dropdown-menu">
                     <li>
-                        <a href="{{url('inputdata')}}">Input Data</a>
+                        <a href="{{url('inputdata')}}">BioData Form</a>
                     </li>
-                    <li>
+                    <!--<li>
                         <a href="{{ url('editdata/'.Auth::id()) }}">Edit Data</a>
                     </li>
-                 <li>
+                     <li>
                         <a href="{{ url('updatedata/'.Auth::id()) }}">Update Data</a>
-                    </li> 
-                    
+                    </li>-->
+
                 </ul>
             </li>
 
@@ -43,14 +43,14 @@
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">Graduate Entrance Form</a>
                 <ul class="dropdown-menu">
                     <li>
-                        <a href="{{url('inputgraddata')}}">Input Data</a>
+                        <a href="{{url('inputgraddata')}}">BioData Form</a>
                     </li>
-                    <li>
+                    <!--<li>
                         <a href="{{ url('editgraddata/'.Auth::id()) }}">Edit Data</a>
                     </li>
-                    {{-- <li>
+                    <li>
                         <a href="{{ url('updategraddata') }}">Update Data</a>
-                    </li> --}}
+                    </li>-->
                 </ul>
             </li>
 
@@ -59,7 +59,7 @@
                 <ul class="dropdown-menu">
                     <li>
                         <a href="{{url('cardpay')}}">Card Payment</a>
-                    </li> 
+                    </li>
                     <li>
                         <a href="{{url('mobilemoneypayment')}}">Mobile Money Payment</a>
                     </li>
@@ -68,11 +68,11 @@
                     </li>
                    <li>
                         <a href="{{ url('updategraddata') }}">Update Data</a>
-                    </li> 
+                    </li>
                 </ul>
             </li>--}}
 
-            
+
         </ul>
 
         <form class="navbar-form navbar-left">

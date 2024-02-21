@@ -58,37 +58,65 @@ class GradController extends Controller
        //     'firstName' => 'required',
        // ]);
         //dd( $validate);
+        $request->validate([
+            'name' => 'required|email',
+            'email' => 'required|email',
+            'password' => 'required',
+            'firstName' => 'string|required',
+            'otherName' => 'string|required',
+            'lastName' => 'string|required',
+            'dob' => 'string|required',
+            'gender' => 'required',
+            'mobileNo' => 'required|integer',
+            'cellNumber1' => 'required|integer',
+            'cellNumber2' => 'required|integer',
+            'maritalStatus' => 'required',
+            'countyOfO' => 'required',
+            'nationality' => 'required',
+            'examNo' => 'required|integer',
+            'uniLoc' => 'required',
+            'gpa' => 'required',
+            'degreeEarned' => 'required',
+            'medicalSchool'=> 'required',
+            'numAttempts' => 'required',
+            'amntpaid' => 'required| numeric',
+            'paydate' => 'required',
+            'bankRecptNo' => 'required|integer'
+
+
+        ]);
+
         $user = User::create(
                    [
 
-                    'name'=>$request->input('name'), 
-                    'email'=>$request->input('email'), 
-                    'password'=>bcrypt($request->input('password')), 
-                    'firstName'=>$request->input('firstName'), 
+                    'name'=>$request->input('name'),
+                    'email'=>$request->input('email'),
+                    'password'=>bcrypt($request->input('password')),
+                    'firstName'=>$request->input('firstName'),
                     'otherName'=>$request->input('otherName'),
-                    'lastName'=>$request->input('lastName'), 
-                    'dob'=>$request->input('dob'), 
-                    'gender'=>$request->input('gender'), 
-                    'mobileNo'=>$request->input('mobileNo'), 
-                    'emergencyNo1'=>$request->input('cellNumber1'), 
-                    'emergencyNo2'=>$request->input('cellNumber2'), 
+                    'lastName'=>$request->input('lastName'),
+                    'dob'=>$request->input('dob'),
+                    'gender'=>$request->input('gender'),
+                    'mobileNo'=>$request->input('mobileNo'),
+                    'emergencyNo1'=>$request->input('cellNumber1'),
+                    'emergencyNo2'=>$request->input('cellNumber2'),
                     'maritalStatus'=>$request->input('maritalStatus'),
-                    'countyOfO'=>$request->input('countyOfO'), 
-                    'nationality'=>$request->input('nationality') 
+                    'countyOfO'=>$request->input('countyOfO'),
+                    'nationality'=>$request->input('nationality')
                 ]);
 
 
         $gradData = Grad::create(
                    [
                     'user_id'=>$user->id,
-                    'examNo'=>$request->input('examNo'), 
+                    'examNo'=>$request->input('examNo'),
                     'uniLoc'=>$request->input('uniLoc'),
-                    'gpa'=>$request->input('gpa'), 
-                    'degreeEarned'=>$request->input('degreeEarned'), 
+                    'gpa'=>$request->input('gpa'),
+                    'degreeEarned'=>$request->input('degreeEarned'),
                     'medicalSchool'=>$request->input('medicalSchool'),
-                    'numAttempts'=>$request->input('numAttempts')    
+                    'numAttempts'=>$request->input('numAttempts')
                    ]
-                );     
+                );
 
          $payment = Payment::create(
             [
@@ -104,12 +132,12 @@ class GradController extends Controller
                 $user->roles()->attach(3);
 
           $mc = new MoodleConnectionController(new curl(), $user);
-        
+
         //dd($mc);
 
         //create and enrol the student
       //  $erp = App::make(ExamRegistrationService::class);
-       // dd($erp); 
+       // dd($erp);
         //initialize the user property of the ExamRegistration Service Object
       //  $erp->user = $user;
 
@@ -122,7 +150,7 @@ class GradController extends Controller
        // return redirect('https://ulentrance.harrisviskinda.com/')
          //   ->with('success'.'Welcome to ULEntrance Exam WebSite');
        // event(new ExamRegistration($user));
-//suppress the output of the function sendSMSMessage() 
+//suppress the output of the function sendSMSMessage()
           ob_start();
         $smsctrl = new SMSController($phoneNo,$fName,$lName);
        // $smsctrl->sendSMSMessage();
@@ -134,7 +162,7 @@ class GradController extends Controller
 
     public function sendMailApi(User $user = null)
     {
-   
+
 
         # Instantiate the client.
         $mgClient =
@@ -144,7 +172,7 @@ class GradController extends Controller
           'from'    => 'ULExamRegistration <postmaster@examregistration.ul.edu.lr>',
           'to'      => $user->email,//'metiehpc@ul.edu.lr'
           'subject' => 'UL ExamRegistration',
-          'text'    => 'Congratulations! You have successfully registered for the UL Entrance Exam!  UL Entrance Exam! http://ulentrance.ul.edu.lr'                          
+          'text'    => 'Congratulations! You have successfully registered for the UL Entrance Exam!  UL Entrance Exam! http://ulentrance.ul.edu.lr'
         );
 
         # Make the call to the client.
@@ -164,7 +192,7 @@ class GradController extends Controller
     }
     public function regGrads()
     {
-        
+
     }
 
     /**

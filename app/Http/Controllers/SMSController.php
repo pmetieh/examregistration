@@ -109,7 +109,7 @@ class SMSController extends Controller
         //
     }
 
-   public function formatPhoneNo($phoneNo = '')
+    public function formatPhoneNo($phoneNo = '')
     {
       //  $str = '+0881750921';//"0(212)-1 203-45 6_7";//;"Visit W3Schools";
        // echo 'Original string '.$str.'<br><br>';// = "(212)-123-4567"//;"Visit W3Schools";
@@ -177,22 +177,27 @@ class SMSController extends Controller
     public function sendSMSMessageTwilio()
     {
 
-
             //$phoneNumber = $request->input('phoneNumber');
             echo "Sending SMS ...";
 
             //get user mobile number
            // $usermobile = $user->mobileNo;
-            $phoneNo = $this->formatPhoneNo($this->phoneNo);
+           // $phoneNo = $this->formatPhoneNo($this->phoneNo);
 
-            $usermobile = $this->phoneNo; //"231881750921";//"231770502254";
+            $usermobile = "+231881750921"; //
+
+dd($usermobile);
+
+            $this->phoneNo;"231881750921";//"231770502254";
             $message = "Thank you ".$this->fName.' '.$this->lName."! You have successfully registered for the UL entrance exam.";
             $sender = "UL Testing Center";
 
-            $account_sid = 'AC39dfcb2ec6b8566cd0d237d668054d2d';//getenv("TWILIO_SID");
+            $account_sid = 'AC3358c091a1ea11140671ca4035e77d1e';
+            //AC39dfcb2ec6b8566cd0d237d668054d2dgetenv("TWILIO_SID");
+
            // dd($account_sid);
-            $auth_token = 'aa7c117ab7dc88443e92189c4e720b03'; //getenv("TWILIO_AUTH_TOKEN");
-            $twilio_number = "ULEntrancee";//StellaMari'12107746350';// 'UL Entrance Exam';//getenv("TWILIO_NUMBER");
+            $auth_token = '6cbaa8897ff5fada11e5d4a46d6a8e39'; //aa7c117ab7dc88443e92189c4e720b03 getenv("TWILIO_AUTH_TOKEN");
+            $twilio_number = '+15673132616';//"ULEntrancee";//StellaMari'12107746350';// 'UL Entrance Exam';//getenv("TWILIO_NUMBER");
             $client = new Client($account_sid, $auth_token);
             $client->messages->create($phoneNo,
             ['from' => $twilio_number, 'body' => $message] );
@@ -210,7 +215,7 @@ class SMSController extends Controller
             //get user mobile number
            // $usermobile = $user->mobileNo;
 
-            $phoneNo = $this->formatPhoneNo($this->phoneNo); 
+            $phoneNo = $this->formatPhoneNo($this->phoneNo);
 
             $usermobile = $this->phoneNo; //"231881750921";//"231770502254";
             $message = "Thank you ".$this->fName.' '.$this->lName."! Your BioData record has been created..";
@@ -228,7 +233,7 @@ class SMSController extends Controller
 
     }
 
-                // Create a formatting functio
+                // Create a formatting function
 
 
 }

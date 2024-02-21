@@ -23,7 +23,12 @@ use Illuminate\Support\Facades\Auth;
 */
 Auth::routes();
 
-//Route::get('/home', 'HomeController@index')->name('home');
+//////////////////Grade Results///////////////////////////////////////////////////////////////////////////////
+
+Route::get("getallgrades/{id}", "GradesResultsController@get_all_grades_local");
+Route::get('getenrolledusers/{id}', "GradesResultsController@get_enrolled_users");
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 Route::get('apimail', 'UGradController@sendMailApi');
 

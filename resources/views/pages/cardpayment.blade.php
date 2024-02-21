@@ -21,7 +21,7 @@
         <span class="alert-danger">
             {{$message}}
         </span>
-        @enderror
+    @enderror
 	<div class="form-group">
 		<label for="customerLastname" class="col-md-6 control-label">Last Name</label>
 		<div class="col-md-6">

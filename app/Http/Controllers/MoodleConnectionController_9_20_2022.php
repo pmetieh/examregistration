@@ -179,13 +179,15 @@ class MoodleConnectionController extends Controller
 
                 $restformat='';
                 //$curl = new curl;
-                $restformat = ($restformat == 'json')?'&moodlewsrestformat=' . $restformat:'';
+      $restformat = ($restformat == 'json')?'&moodlewsrestformat=' . $restformat:'';
                 $resp = $this->curl->post($serverurl . $restformat, $params);
                // print_r($resp);
     }
 
     public function enrollGradStudent($chosen_program)
     {
+       // $erp = $_erp;
+        //dd($erp);
 
     $firstname  = $this->user->firstName;//"Justina";//"TestUser";
     $lastname   = $this->user->lastName;//"Knuckles";//TestUser";
@@ -240,42 +242,29 @@ class MoodleConnectionController extends Controller
     $params = array('users' => $users);
     //REST call
    // header('Content-Type: text/plain');
-    //$serverurl = $domainname . "/webservice/rest/server.php?wstoken=" . $wstoken . "&wsfunction=" . $wsfunctionname;
-    $restformat = 'json';
-    $domainname = 'http://ultesting.ul.edu.lr';
-    $wstoken = '1b93c591473c1a484e2909066a4f4344'; //paste your create user token here e8b0ff9c2976d976d8f3cc3d7c156e07
-    $wsfunctionname = 'core_user_create_users';//create_user moodle core web service function name
-
-
-    $serverurl = $domainname . "/webservice/rest/server.php?wsfunction=" . $wsfunctionname . "&wstoken=" .$wstoken."&moodlewsrestformat=".$restformat ;
-
-
-
-
-    // $curl = new curl;
-   // $restformat = ($restformat == 'json')?'&moodlewsrestformat=' . $restformat:'';
+    $serverurl = $domainname . "/webservice/rest/server.php?wstoken=" . $wstoken . "&wsfunction=" . $wsfunctionname;
+   // $curl = new curl;
+    $restformat = ($restformat == 'json')?'&moodlewsrestformat=' . $restformat:'';
 
 
    // dd($params);
 
-    $resp = $this->curl->post($serverurl, $params);
-    $resp = json_decode($resp);
-
-    //dd($resp[0]->id);
-
-    //print_r($resp[0]->id);
+    $resp = $this->curl->post($serverurl . $restformat, $params);
+    dd($resp);
+    print_r($resp);
 
     //get id from $resp
-   // $xml_tree = new \SimpleXMLElement($resp);
+    $xml_tree = new \SimpleXMLElement($resp);
   //  print_r($xml_tree);
-    //$value = $xml_tree->MULTIPLE->SINGLE->KEY->VALUE;
-
-    //get the id of the newly created user
-    $user_id = $resp[0]->id;//intval(sprintf("%s",$value));
+    $value = $xml_tree->MULTIPLE->SINGLE->KEY->VALUE;
+    $user_id = intval(sprintf("%s",$value));
     echo"<br/>user_id number = $user_id";
 
 
-
+    //the graduate course Ids are
+    //4 for Maths
+    // 5 for English
+    // 6 for Science
 
 //check for which program that the student wants to test for and enroll him/her
     //in the appropiate test
@@ -294,7 +283,7 @@ class MoodleConnectionController extends Controller
 
     echo "\nThe user has been successfully enrolled to course " .$course_id; //$i;
     }
-  //  return back()->with('userenrol', 'Congratulations!! Registration successful. Check your email for Login credentials');
+    return back()->with('userenrol', 'Congratulations!! Registration successful. Check your email for Login credentials');
 }
 
     public function enrollUnderGradStudent()
@@ -336,7 +325,7 @@ class MoodleConnectionController extends Controller
     $wstoken = '1b93c591473c1a484e2909066a4f4344'; //paste your create user token here e8b0ff9c2976d976d8f3cc3d7c156e07
     $wsfunctionname = 'core_user_create_users';//create_user moodle core web service function name
     //REST return value
-    //$restformat = 'xml';
+    $restformat = 'xml';
     //parameters
     $user1 = new \stdClass();
     $user1->username    = $username;
@@ -355,25 +344,22 @@ class MoodleConnectionController extends Controller
     $params = array('users' => $users);
     //REST call
    // header('Content-Type: text/plain');
-   $restformat = 'json';
-
+    $serverurl = $domainname . "/webservice/rest/server.php?wstoken=" . $wstoken . "&wsfunction=" . $wsfunctionname;
    // $curl = new curl;
-    //$restformat = ($restformat == 'json')?'&moodlewsrestformat=' . $restformat:'';
+    $restformat = ($restformat == 'json')?'&moodlewsrestformat=' . $restformat:'';
 
-    $serverurl = $domainname . "/webservice/rest/server.php?wsfunction=" . $wsfunctionname . "&wstoken=" .$wstoken."&moodlewsrestformat=".$restformat ;
 
-   // dd($serverurl);
-   //dd($serverurl . $restformat);
-    $resp = $this->curl->post($serverurl, $params); //. $restformat,
+   // dd($params);
+
+    $resp = $this->curl->post($serverurl . $restformat, $params);
     //dd($resp);
-    //print_r($resp);
-    $resp = json_decode($resp);
+    print_r($resp);
 
     //get id from $resp
-    //$xml_tree = new \SimpleXMLElement($resp);
-    //print_r($xml_tree);
-   // $value = $xml_tree->MULTIPLE->SINGLE->KEY->VALUE;
-    $user_id = $resp[0]->id;//intval(sprintf("%s",$value));
+    $xml_tree = new \SimpleXMLElement($resp);
+    print_r($xml_tree);
+    $value = $xml_tree->MULTIPLE->SINGLE->KEY->VALUE;
+    $user_id = intval(sprintf("%s",$value));
   //  echo"<br/>user_id number = $user_id";
 
     //enrol_manual_enrol_users
@@ -393,9 +379,9 @@ class MoodleConnectionController extends Controller
 
         $this->enrol($user_id, $course_id);
 
-    echo "<br>The user has been successfully enrolled to course " .$course_id; //$i;
+    echo "\nThe user has been successfully enrolled to course " .$course_id; //$i;
     }
-  //  return back()->with('userenrol', 'Congratulations!! Registration successful. Check your email for Login credentials');
+    return back()->with('userenrol', 'Congratulations!! Registration successful. Check your email for Login credentials');
 }
 
 }

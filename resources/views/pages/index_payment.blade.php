@@ -17,15 +17,31 @@
 <p>
 	<img class="center-block" src="images/students_taking_exam.jpg" width="100%" height="auto"/>
 	<div class="row">
+		<div class="jumbotron" width="%100">
+			<p >
+				<h2>Welcome to the University of Liberia Center for Testing and Evaluation</h2>
+				<p style="text-align: left">
+					In order to register for the Entrance exams, graduate and undergraduate, you
+					must fill out one of the electronic registration forms on this site.
+				</p>
+			</p>
+			</p>
+		</div>
+	</div>
+
+	<div class="row">
 	<div width="100%" class="col-lg-6 pull-left jumbotron">
+
 		<p>
+
 			<h2>Exam Date and Time</h2>
 			<p>
-				
-				<?php 
+
+				<?php
 				use \App\ExamDate;
 				use \App\Http\Controllers\ExamDateController;
 				use \Illuminate\Support\Facades\DB;
+
 				//get the most current exam date. This will correspond with the record with the highest id column value
 				 $examDetail = ExamDate::find(ExamDate::max('id'));
 				// echo $examDetail;

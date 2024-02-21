@@ -3,7 +3,7 @@
 {{-- <div id="outer_content" class="container"> --}}
 
    <h1 style="font-size: 2.5em; text-align: center; color: blue;">University Of Liberia</h1>
-   <h3>UnderGraduate Entrance Exam BioData Input Form</h3>
+   <h3>UnderGraduate Entrance Exam BioData Form</h3>
 
 
 
@@ -392,9 +392,9 @@
 <script type="text/javascript" >
     $(function(){
 
-         alert('jQuery is working');
+         //alert('jQuery is working');
          $('#biodata').on('submit', function(e){
-            e.preventDefault();
+           // e.preventDefault();
 
             ajax({
                 url:$(this).attr('action'),

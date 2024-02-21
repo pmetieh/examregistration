@@ -131,26 +131,26 @@ class PaymentController extends Controller
 
     public function cardpay(Request $request)
     {
-        //
-      //  dd($request);
+        /*$request->validate(
+            ["description" => 'required|string',
+            "noOfItems" => 'required|integer',
+            "cvvCode" => 'required|integer',
+             "year" => 'required|integer',
+            "month" => 'required|string',
+            "cardnumber" => 'required|integer']);
+            */
+
+            //  dd($request);
         $request->validate([
             "phoneNumber" => 'required',
-            "customerFirstName" => 'required',
-            "customerLastname"=> 'required',
+            "customerFirstName" => 'required|string',
+            "customerLastname"=> 'required|string',
             "customerEmail" => 'required|email',
             "phoneNumber" => 'required|integer',
             "amount" => 'required|integer',
             "referenceNumber" => 'required|integer',
-            "countryCurrencyCode" => 'required|integer',
-            "description" => 'required|string',
-            "noOfItems" => 'required|integer',
-            "cvvCode" => 'required|integer',
-            "curCode" => 'required|integer',
-            "year" => 'required|integer',
-            "month" => 'required',
-            "cardnumber" => 'required|integer'
+            "curCode" => 'required|integer']);
 
-        ]);
 
         $phoneNo = $request->input("phoneNumber");
         $fName = $request->input("customerFirstName");
@@ -578,6 +578,8 @@ class PaymentController extends Controller
         }
         */
 
-   }
+   }//
+
 
 }
+
